@@ -1,0 +1,46 @@
+.rating-display {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  color: var(--kemra-gold-dark);
+  white-space: nowrap;
+}
+
+.rating-stars {
+  position: relative;
+  display: inline-block;
+  flex: 0 0 auto;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.rating-stars-base,
+.rating-stars-fill {
+  display: inline-flex;
+  gap: 2px;
+}
+
+.rating-stars-base {
+  color: var(--border-color);
+}
+
+.rating-stars-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  color: var(--kemra-gold);
+  white-space: nowrap;
+}
+
+.rating-value {
+  color: var(--kemra-brown);
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.rating-count {
+  color: var(--text-color);
+  font-size: 0.82em;
+}

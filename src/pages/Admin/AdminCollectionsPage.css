@@ -1,0 +1,292 @@
+.admin-collections-page {
+  min-height: 100vh;
+  padding: 34px clamp(18px, 4vw, 58px) 48px;
+  color: #15342d;
+  background: #f4f1e9;
+  font-family: var(--body-font);
+}
+
+.admin-collections-page > * {
+  width: min(100%, 1200px);
+  margin-inline: auto;
+}
+
+.admin-collections-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 20px;
+  color: #526a5e;
+  font-size: 12px;
+}
+
+.admin-collections-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.admin-collections-heading h1 {
+  margin-top: 4px;
+  color: #15342d;
+  font-size: clamp(28px, 3vw, 36px);
+}
+
+.admin-collections-heading p:last-child {
+  margin-top: 7px;
+  color: #777c74;
+  font-size: 12px;
+}
+
+.admin-collections-save {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 42px;
+  padding: 0 16px;
+  border: 1px solid #0b3028;
+  border-radius: 8px;
+  color: #f7f1e5;
+  background: #0b3028;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.admin-collections-save:hover {
+  background: #17483b;
+}
+
+.admin-collections-note,
+.admin-collections-feedback,
+.admin-collections-error {
+  margin-top: 20px;
+  padding: 13px 15px;
+  border-left: 3px solid #c5a15f;
+  border-radius: 5px;
+  color: #6d6b60;
+  background: #ede8dc;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.admin-collections-feedback {
+  border-left-color: #41785d;
+  color: #355b45;
+  background: #e8efe6;
+}
+
+.admin-collections-error {
+  border-left-color: #a34737;
+  color: #7a3428;
+  background: #f5e7e2;
+}
+
+.admin-collections-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.admin-collection-card {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.8fr) minmax(340px, 1.2fr) auto;
+  align-items: center;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid #e5decf;
+  border-radius: 13px;
+  background: #fffdf8;
+}
+
+.admin-collection-card__identity {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+}
+
+.admin-collection-number {
+  display: grid;
+  flex: 0 0 auto;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border-radius: 10px;
+  color: #8e7449;
+  background: #f3ead8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.admin-collection-kind {
+  color: #9b8050;
+  font-size: 9px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.admin-collection-card h2 {
+  margin-top: 4px;
+  color: #20392e;
+  font-size: 14px;
+}
+
+.admin-collection-card__identity p {
+  margin-top: 5px;
+  color: #898b81;
+  font-size: 10px;
+}
+
+.admin-collection-card__settings {
+  display: grid;
+  grid-template-columns: minmax(120px, 0.8fr) repeat(2, minmax(145px, 1fr));
+  align-items: center;
+  gap: 12px;
+}
+
+.admin-collection-name {
+  display: grid;
+  gap: 6px;
+  color: #485e51;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.admin-collection-name input {
+  width: 100%;
+  min-height: 38px;
+  padding: 8px 10px;
+  border: 1px solid #e2ddcf;
+  border-radius: 7px;
+  color: #243c32;
+  background: #fffefa;
+  font: inherit;
+  font-size: 11px;
+}
+
+.admin-collection-name input:focus-visible {
+  outline: 2px solid #c5a15f;
+  outline-offset: 2px;
+}
+
+.admin-collection-toggle {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 48px;
+  color: #526a5e;
+  cursor: pointer;
+}
+
+.admin-collection-toggle > input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.admin-collection-toggle__icon {
+  display: grid;
+  flex: 0 0 auto;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 9px;
+  color: #8e7449;
+  background: #f3ead8;
+  font-size: 15px;
+}
+
+.admin-collection-toggle > span:last-child {
+  display: grid;
+  gap: 3px;
+}
+
+.admin-collection-toggle strong {
+  color: #485e51;
+  font-size: 10px;
+}
+
+.admin-collection-toggle small {
+  color: #898b81;
+  font-size: 9px;
+}
+
+.admin-collection-toggle > input:focus-visible + .admin-collection-toggle__icon {
+  outline: 2px solid #c5a15f;
+  outline-offset: 2px;
+}
+
+.admin-collection-card__order {
+  display: grid;
+  gap: 5px;
+}
+
+.admin-collection-card__order button {
+  display: grid;
+  width: 30px;
+  height: 30px;
+  place-items: center;
+  border: 1px solid #e5decf;
+  border-radius: 7px;
+  color: #526a5e;
+  background: #fffefa;
+  cursor: pointer;
+}
+
+.admin-collection-card__order button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+@media (max-width: 1050px) {
+  .admin-collection-card {
+    grid-template-columns: 1fr auto;
+  }
+
+  .admin-collection-card__settings {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .admin-collection-card__order {
+    grid-column: 2;
+    grid-row: 1;
+    grid-template-columns: 30px 30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .admin-collections-page {
+    padding: 24px 14px 34px;
+  }
+
+  .admin-collections-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-collections-save {
+    width: 100%;
+  }
+
+  .admin-collection-card {
+    gap: 12px;
+    padding: 14px;
+  }
+
+  .admin-collection-card__settings {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .admin-collection-name {
+    margin-bottom: 4px;
+  }
+}

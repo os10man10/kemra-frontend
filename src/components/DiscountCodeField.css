@@ -1,0 +1,12 @@
+.discount-code-box { margin: 18px 0; padding: 13px; border: 1px solid #e8e1d4; border-radius: 9px; background: #fbf9f4; }
+.discount-code-form { display: grid; gap: 8px; }
+.discount-code-form > label { display: flex; align-items: center; gap: 7px; color: #526157; font-size: 10px; font-weight: 700; }
+.discount-code-form > label svg { color: #a48650; }
+.discount-code-form__controls { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 7px; }
+.discount-code-form__controls input { min-width: 0; height: 38px; padding: 0 10px; border: 1px solid #dfd8ca; border-radius: 6px; color: #243c32; background: #fffefa; font: inherit; font-size: 11px; text-transform: uppercase; }
+.discount-code-form__controls input:focus-visible { outline: 2px solid #c5a15f; outline-offset: 1px; }
+.discount-code-form__controls button { display: inline-flex; min-width: 66px; height: 38px; align-items: center; justify-content: center; gap: 5px; padding: 0 11px; border: 1px solid #0b3028; border-radius: 6px; color: #fff8e9; background: #0b3028; font: inherit; font-size: 10px; font-weight: 700; cursor: pointer; }
+.discount-code-form__controls button:hover { background: #17483b; }
+.discount-code-form__controls .discount-code-remove { min-width: 38px; border-color: #d8cfbe; color: #526a5e; background: #fffdf8; }
+.discount-code-status { color: #35644d; font-size: 10px; line-height: 1.45; }
+.discount-code-status.is-error { color: #9c4c3d; }

@@ -1,0 +1,212 @@
+.hero {
+  position: relative;
+  margin-bottom: 50%;
+  padding-top: 20px;
+}
+
+.hero .mySwiper {
+  overflow: hidden;
+  border-radius: 14px;
+  clip-path: inset(0 round 14px);
+  box-shadow: 0 10px 22px rgb(36 27 17 / 14%);
+  --swiper-pagination-color: #3b2a18;
+  --swiper-pagination-bullet-inactive-color: #3b2a18;
+  --swiper-pagination-bullet-inactive-opacity: 0.58;
+}
+
+.hero .mySwiper .swiper-pagination-bullet {
+  background-color: #3b2a18;
+  opacity: 0.58;
+}
+
+.hero .mySwiper .swiper-pagination-bullet-active {
+  background-color: #3b2a18;
+  opacity: 1;
+}
+
+.hero .swiper-slide {
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.hero .swiper-slide .content {
+  position: absolute;
+  z-index: 1;
+  top: 17%;
+  left: 5.8%;
+  width: min(32%, 520px);
+}
+
+.hero .swiper-slide .content::before {
+  position: absolute;
+  z-index: -1;
+  top: -42px;
+  right: -100px;
+  bottom: -42px;
+  left: -48px;
+  border-radius: 24px 0 0 24px;
+  background: radial-gradient(
+    ellipse at 22% 50%,
+    rgb(4 17 14 / 48%) 0%,
+    rgb(4 17 14 / 30%) 52%,
+    rgb(4 17 14 / 12%) 76%,
+    transparent 100%
+  );
+  content: "";
+  pointer-events: none;
+}
+
+.hero .swiper-slide .content h4 {
+  margin: 0 0 12px;
+  color: #f3d78f;
+  font-size: clamp(11px, 1vw, 17px);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-shadow:
+    0 1px 0 #694b16,
+    0 2px 4px rgb(4 18 15 / 55%),
+    0 0 8px rgb(241 207 112 / 24%);
+  text-transform: uppercase;
+}
+
+.hero .swiper-slide .content h3 {
+  margin: 0 0 18px;
+  color: #f4e4c1;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(30px, 4vw, 72px);
+  font-weight: 400;
+  letter-spacing: 0.015em;
+  line-height: 0.98;
+  text-shadow:
+    0 2px 0 rgb(83 56 22 / 65%),
+    0 4px 9px rgb(4 18 15 / 68%),
+    0 0 16px rgb(255 220 145 / 34%);
+  text-transform: uppercase;
+}
+
+.hero .swiper-slide .content p {
+  max-width: 21ch;
+  margin: 0 0 22px;
+  color: #f8eedb;
+  font-size: clamp(10px, 1vw, 16px);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  line-height: 1.65;
+  text-shadow: 0 2px 5px rgb(16 12 7 / 80%);
+  text-transform: uppercase;
+}
+
+.hero .swiper-slide .content .btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #c99d43;
+  border-radius: 8px;
+  padding: 13px 20px;
+  background: rgb(13 15 11 / 94%);
+  color: #edca70;
+  font-size: clamp(11px, 0.9vw, 15px);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 24%);
+}
+
+.hero .swiper-slide .content .btn::after {
+  content: "→";
+  font-size: 1.35em;
+  line-height: 0.8;
+}
+
+@media (min-width: 601px) {
+  .hero {
+    margin-bottom: 8px;
+    padding-top: 16px;
+  }
+
+  .hero .swiper-slide > img,
+  .hero .swiper-slide > video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    margin-bottom: 4px;
+    padding-top: 12px;
+  }
+
+  .hero .mySwiper {
+    border-radius: 10px;
+    clip-path: inset(0 round 10px);
+  }
+
+  .hero .swiper-slide {
+    border-radius: 10px;
+  }
+
+  .hero .swiper-slide > video {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero .swiper-slide .content {
+    top: 10%;
+    left: 5.8%;
+    width: 32%;
+    transform: none;
+  }
+
+  .hero .swiper-slide .content::before {
+    top: -7px;
+    right: -68px;
+    bottom: -7px;
+    left: -12px;
+    border-radius: 12px 0 0 12px;
+    background: radial-gradient(
+      ellipse 140% 68% at 20% 50%,
+      rgb(4 17 14 / 40%) 0%,
+      rgb(4 17 14 / 25%) 55%,
+      transparent 100%
+    );
+  }
+
+  .hero .swiper-slide .content h4 {
+    margin-bottom: 5px;
+    font-size: clamp(7px, 2.45vw, 9px);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+  }
+
+  .hero .swiper-slide .content h3 {
+    margin-bottom: 7px;
+    font-size: clamp(15px, 5.2vw, 20px);
+    letter-spacing: 0;
+    line-height: 0.98;
+  }
+
+  .hero .swiper-slide .content p {
+    max-width: 100%;
+    margin: 0 0 8px;
+    font-size: clamp(7px, 2.25vw, 8.5px);
+    letter-spacing: 0.11em;
+    line-height: 1.4;
+  }
+
+  .hero .swiper-slide .content .btn {
+    box-sizing: border-box;
+    width: max-content;
+    max-width: 100%;
+    justify-content: center;
+    gap: 5px;
+    padding: 4px 7px;
+    border-radius: 6px;
+    font-size: clamp(7px, 2.2vw, 8.5px);
+    line-height: 1.2;
+    text-align: center;
+    white-space: normal;
+  }
+}
